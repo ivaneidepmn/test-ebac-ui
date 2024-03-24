@@ -34,12 +34,17 @@ it('Deve fazer login com sucesso - usando massa de dados', () => {
     cy.get('.woocommerce-form > .button').click()
     cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, testfot (não é testfot? Sair)')
 });
-it.only('Deve fazer login com sucesso - usando fixtures', () => {
+it('Deve fazer login com sucesso - usando fixtures', () => {
     cy.fixture( 'perfil').then(dados => {
         cy.get('#username').type(dados.usuario, {log: false})
         cy.get('#password').type(dados.senha , {log:false})
         cy.get('.woocommerce-form > .button').click()
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, testfot (não é testfot? Sair)')
+    });
     })
-});
-});
+    it.only('Deve fazer login com sucesso - Usando Comandos customizados', () => {
+            cy.login( 'testfot@ebac.com.br', 'Self@145!=')
+            cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, testfot (não é testfot? Sair)')
+    });
+
+})

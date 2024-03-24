@@ -36,4 +36,11 @@ describe('Funcionalidade: Cadastro', () => {
         cy.get('.woocommerce-Button').click()
         cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso.')
 });
+
+it.only('Deve completar o cadastro com sucesso - Usando Comando Customizado', () => {
+    cy.preCadastro(faker.internet.email(), 'carD52$.A', faker.person.firstName(), faker.person.lastName())
+    cy.preCadastro('.woocommerce-MyAccount-navigation-link--edit-account > a').click()
+    cy.preCadastro('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso.')
 });
+});
+
