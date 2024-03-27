@@ -1,0 +1,20 @@
+[
+    {
+      "nomeProduto": "Abominable hoodie",
+      "tamanho": "XS",
+      "cor": "Blue",
+      "quantidade": 3
+    },
+    {
+      "nomeProduto": "Chaz Kangeroo Hoodie",
+      "tamanho": "XL",
+      "cor": "Blue",
+      "quantidade": 2
+    },
+    {
+      "nomeProduto": "Geo Insulated Jogging Pant",
+      "tamanho": "34",
+      "cor": "Green",
+      "quantidade": 5
+    }
+]

@@ -42,9 +42,8 @@ it('Deve fazer login com sucesso - usando fixtures', () => {
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, testfot (não é testfot? Sair)')
     });
     })
-    it.only('Deve fazer login com sucesso - Usando Comandos customizados', () => {
-            cy.login( 'testfot@ebac.com.br', 'Self@145!=')
-            cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, testfot (não é testfot? Sair)')
-    });
-
-})
+  it.only('Deve fazer login com sucesso - Usando Comandos customizados', () => {
+      cy.login('testfot@ebac.com.br', 'Self@145!=');
+      cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, testfotQaivaneide');
+});
+});
